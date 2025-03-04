@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>HOGWARTS - Magia y Hechicería</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- icono -->
+    <link href="img/icoHogwarts.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estiloCarrusel.css">
+
+    <!--Fuente extras-->
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/lucky-shoes" rel="stylesheet">
+</head>
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid /*bg-light*/ pt-3 d-none d-lg-block"> <!--bg-ligh es para cambiar el fondo atrás del nav-->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <p class="parte-superior">Conoce y crea en el mundo Mágico</p>
+                        <p class="text-body px-3 parte-superior">|</p>
+                        <p class="parte-superior">Harry Potter</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5" style="background-color: #1E1E1E;"> <!-- el style es para darle color al fondo del nav-->
+                <a href="" class="navbar-brand">
+                    <h1 class="m-0 text-primary">HOGWARTS</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                        <a href="casas.html" class="nav-item nav-link">Casas</a>
+                        <a href="personajes.html" class="nav-item nav-link">Personajes</a>
+                        <a href="avatar.html" class="nav-item nav-link">Crear Avatar</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Libros</a>
+                            <div class="dropdown-menu border-0 rounded-0 m-0">
+                                <a href="filosofal.html" class="dropdown-item">1. Harry Potter y la Piedra Filosofal</a>
+                                <a href="camaraSecreta.html" class="dropdown-item">2. Harry Potter y la Cámara Secreta</a>
+                                <a href="prisionero.html" class="dropdown-item">3. Harry Potter y el Prisionero de Azkaban</a>
+                                <a href="caliz.html" class="dropdown-item">4. Harry Potter y el Cáliz de Fuego</a>
+                                <a href="fenix.html" class="dropdown-item">5. Harry Potter y la Órden del Fénix</a>
+                                <a href="misterio.html" class="dropdown-item">6. Harry Potter y el Misterio del Príncipe</a>
+                                <a href="reliquias.html" class="dropdown-item">7. Harry Potter y las Reliquias de la Muerte</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contáctanos</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 800px;">
+                            <h1 class="display-3 text-white-50 mb-md-4">Mundo Mágico</h1>
+                            <h4 class="text-white-50 text-uppercase mb-md-5" style="font-family: Harry Potter, sans-serif;">de</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 800px;">
+                            <h1 class="display-3 text-white-50 mb-md-4" id="display-3">Magia, Amistad y <br>Valentía Eterna</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- INICIO DE RESUMEN -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-6" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="img/about.jpg" style="object-fit: cover; border-radius: 20px">
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pb-lg-5">
+                    <div class="about-text p-4 p-lg-5 my-lg-5" id="resumen">
+                        <div id="resumen2">
+                            <div id="resumen3">
+                                <h6 class="text-uppercase" style="letter-spacing: 8px; color:  rgb(39, 197, 39);">RESUMEN:</h6>
+                                <h1 class="mb-3" style="color:  rgb(255, 255, 255); font-family: 'Harry Potter', sans-serif; font-size: 30px; 
+                                    text-shadow: green 5px 5px 10px; font-style:oblique;">El Mundo Mágico de Harry Potter</h1>
+                                <p id="text-resumen">La saga Harry Potter, escrita por J.K. Rowling, es una serie de siete libros de fantasía que narra la historia de un joven mago, Harry Potter, y su lucha contra el mago tenebroso <span style="color: rgb(39, 197, 39);">Lord Voldemort.</span> A lo largo de la historia, Harry descubre su verdadero origen, hace amigos inseparables y enfrenta grandes desafíos en el mundo mágico.</p>
+                                <div class="row mb-4">
+                                    <div class="col-6">
+                                        <img class="img-fluid" src="img/about1.jpg" alt="">
+                                    </div>
+                                    <div class="col-6">
+                                        <img class="img-fluid" src="img/about2.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN DE RESUMEN -->
+
+    <!-- INICIO DE CUALIDADES -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-3 pb-3">
+                <h1 id="feature-cuality" style="color:  rgb(255, 255, 255); font-family: 'Harry Potter', sans-serif; font-size: 50px; 
+                text-shadow: green 5px 5px 10px; font-style:oblique;">Cualidades de un estudiante en  Hogwarts por casa:</h1><br>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="text-center pb-4">
+                    <img class="img-fluid mx-auto" src="img/gryffindor.ico" style="width: 200px">
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <br><h5 class="text-truncate" style="color:  rgb(39, 197, 39)">Gryffindor:</h5>
+                        <p class="p-casas">Valentía, audacia, liderazgo y espíritu de aventura.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid mx-auto" src="img/slytherin.ico" style="width: 99px">
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <br><h5 class="text-truncate" style="color:  rgb(39, 197, 39)">Slytherin:</h5>
+                        <p class="p-casas">Ambición, astucia, determinación y liderazgo estratégico.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid mx-auto" src="img/ravenclaw.ico" style="width: 91px">
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <br><h5 class="text-truncate" style="color:  rgb(39, 197, 39)">Ravenclaw:</h5>
+                        <p class="p-casas">Inteligencia, ingenio, amor por el conocimiento y creatividad.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid mx-auto"  src="img/hufflepuff.ico" style="width: 91px">
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <br><h5 class="text-truncate" style="color:  rgb(39, 197, 39)">Hufflepuff:</h5>
+                        <p class="p-casas">Lealtad, honestidad, paciencia y dedicación al trabajo duro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN DE CUALIDADES -->
+
+
+    <!-- INICIO DE SAGA DE HARRY POTTER -->
+    <div class="container-fluid py-1">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px; font-size: 25px"></h6>
+                <h1 style="color:  rgb(255, 255, 255); font-family: 'Harry Potter', sans-serif; font-size: 50px; 
+                text-shadow: green 5px 5px 10px; font-style:oblique;">Saga de <br>Harry Potter</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <iframe width="350" height="230" src="https://www.youtube.com/embed/tXRXEqd5AhQ?si=aSHezdXlqTOWV1FZ" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen></iframe>
+                        <a class="destination-overlay text-white text-decoration-none span-saga">
+                            <h5 class="text-white" style="text-align: center">Harry Potter</h5>
+                            <span>y la Piedra Filosofal.</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <iframe width="350" height="230" src="https://www.youtube.com/embed/8upL2xQrPbc?si=ok2s3Z-UGvOZhMkc" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen></iframe>
+                        <a class="destination-overlay text-white text-decoration-none span-saga">
+                            <h5 class="text-white">Harry Potter</h5>
+                            <span>y la Cámara Secreta.</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <iframe width="350" height="230" src="https://www.youtube.com/embed/boD5ojmUgHY?si=Enssc4oUKobKsv6x" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen></iframe>
+                        <a class="destination-overlay text-white text-decoration-none span-saga">
+                            <h5 class="text-white">Harry Potter</h5>
+                            <span>y el Prisionero de Azkaban.</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <iframe width="350" height="230" src="https://www.youtube.com/embed/sLzrc79JnWw?si=zk_Y9B49utnS8hW6" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen></iframe>
+                        <a class="destination-overlay text-white text-decoration-none span-saga">
+                            <h5 class="text-white">Harry Potter</h5>
+                            <span>y el Cáliz de Fuego.</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <iframe width="350" height="230" src="https://www.youtube.com/embed/raaATEJsMQE?si=QHk2qIgVYGDgzZ0H" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen></iframe>
+                        <a class="destination-overlay text-white text-decoration-none span-saga">
+                            <h5 class="text-white">Harry Potter</h5>
+                            <span>y la Órden del Fénix</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <iframe width="350" height="230" src="https://www.youtube.com/embed/8bgLXigzeso?si=WnH5qpR7iLoOTI8N" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen></iframe>
+                        <a class="destination-overlay text-white text-decoration-none span-saga">
+                            <h5 class="text-white">Harry Potter</h5>
+                            <span>y el Misterio del Príncipe.</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <iframe width="350" height="230" src="https://www.youtube.com/embed/-FZqBIiimYA?si=MWvlNAmeuWMeo_ph&amp;start=5" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen></iframe>
+                        <a class="destination-overlay text-white text-decoration-none span-saga">
+                            <h5 class="text-white">Harry Potter</h5>
+                            <span>y las Reliquias de la Muerte, parte 1.</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2">
+                        <iframe width="350" height="230" src="https://www.youtube.com/embed/AM_2PFh1vc0?si=V-2OAJH2hfCK7TPQ&amp;start=5" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen></iframe>
+                        <a class="destination-overlay text-white text-decoration-none span-saga">
+                            <h5 class="text-white">Harry Potter</h5>
+                            <span>y las Reliquias de la Muerte, parte 2.</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- FIN DE SAGA DE HARRY POTTER -->
+
+    <!-- INICIO DE REGISTRO Y 30% DE DESCUENTO -->
+    <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px; font-size: 30px;">Super Oferta</h6>
+                        <h1 class="text-white"><span class="text-primary">30% DESCUENTO</span><br> Al Registrarte</h1>
+                    </div>
+                    <p class="text-white">Únete a nuestra comunidad mágica y disfruta de un 30% de descuento en tu 
+                        primera compra. Solo necesitas registrarte y automáticamente recibirás tu descuento exclusivo. 
+                        ¡No dejes pasar esta oportunidad y vive la magia con increíbles beneficios! <br><br>
+                        ¡Regístrate ahora y ahorra! ✨</p>
+                    
+                    <ul class="list-inline text-white m-0">
+                        <li class="py-2">🔹 Oferta por tiempo limitado</li>
+                        <li class="py-2">🔹 Solo para nuevos usuarios</li>
+                    </ul>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card border-0">
+                        <div class="card-header bg-primary text-center p-4">
+                            <h1 class="text-white m-0">¡Regístrate ya!</h1>
+                        </div>
+                        <div class="card-body rounded-bottom bg-white p-5">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="nombres" id="exampleFormControlInput1" placeholder="Nombre completo" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com" required>
+                                </div>
+                                <div>
+                                    <!--<a class="btn-cesta" type="button" class="btn btn-primary">Comprar</a>  -->
+                                    <a href="#" type="button" class="btn-cesta btn-primary" onclick="mostrarSuccessModal(event)">Registrarse</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN DE REGISTRO Y 30% DE DESCUENTO -->
+
+    <!-- INICIO DE MODAL DE REGISTRO EXITOSO -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Éxito</h1>
+                    <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center">
+                        <div id="successIcon" class="checkmark-circle">
+                            <div class="background"></div>
+                            <div class="checkmark draw"></div>
+                        </div>
+                    </div>
+                    <h4 class="mt-3 text-success">Registrado exitosamente</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- FIN DE MODAL DE REGISTRO EXITOSO -->
+
+<!-- INICIO DE CARRUSEL DE PRODUCTOS -->
+<div>
+    <h1 style="color:  rgb(255, 255, 255); font-family: 'Harry Potter', sans-serif; font-size: 50px; 
+            text-shadow: green 5px 5px 10px; font-style:oblique; text-align: center;">Compra productos relacionados<br>a Hogwarts</h1>
+
+
+<!-- //////////////////////////////////////////// Button trigger modal//////////////////////////////////////////// -->
+
+<!-- BOTÓN PARA ABRIR EL CARRITO -->
+<button type="button" class="btn-cesta btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Carrito de Compras
+</button>
+
+<!-- //////////////////////////////////////////// MODAL CARRITO DE COMPRAS //////////////////////////////////////////// -->
+<div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito de Compras</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Aquí puedes agregar el contenido del carrito -->
+            </div>
+            <div class="modal-footer">
+                <!-- BOTÓN PARA ABRIR LA RESERVACIÓN (AHORA FUERA DEL MODAL) -->
+                <button type="button" class="btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalReserva">
+                    Comprar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- //////////////////////////////////////////// MODAL DE RESERVACIÓN //////////////////////////////////////////// -->
+<div class="modal bg-luz-sutil" id="exampleModalReserva" tabindex="-1" aria-labelledby="exampleModalReservaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Reservación</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="modal-title fs-5" style="font-family: 'Harry Potter'; text-align: center;">Harry Potter</h1>
+                    <form id="compraForm">
+                        <div class="mb-3">
+                            <label for="nombres" class="col-form-label text-dark">Nombres:</label>
+                            <input type="text" class="form-control" id="nombres" placeholder="Ingresar nombres" required>
+                            <small class="text-danger" id="nombresError"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="apellidos" class="col-form-label text-dark">Apellidos:</label>
+                            <input type="text" class="form-control" id="apellidos" placeholder="Ingresa apellidos" required>
+                            <small class="text-danger" id="apellidosError"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="direccion" class="col-form-label text-dark">Dirección:</label>
+                            <input type="text" class="form-control" id="direccion" placeholder="Distrito, Departamento" required>
+                            <small class="text-danger" id="direccionError"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="col-form-label text-dark">Teléfono:</label>
+                            <input type="text" class="form-control" id="telefono" placeholder="0000-0000" required>
+                            <small class="text-danger" id="telefonoError"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+                            <small class="text-danger" id="emailError"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+                            <small class="text-danger" id="emailError"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+                            <small class="text-danger" id="emailError"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+                            <small class="text-danger" id="emailError"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+                            <small class="text-danger" id="emailError"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+                            <small class="text-danger" id="emailError"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+                            <small class="text-danger" id="emailError"></small>
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
+                                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+                                <small class="text-danger" id="emailError"></small>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
+                                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+                                <small class="text-danger" id="emailError"></small>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
+                                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+                                <small class="text-danger" id="emailError"></small>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
+                                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+                                <small class="text-danger" id="emailError"></small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-primary btn-enviar" type="submit" form="compraForm">Reservar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+<!-- //////////////////////////////////////////// Fin del Modal //////////////////////////////////////////// -->
+    <div class="carrusel-container">
+            
+        <!-- Botón izquierdo -->
+        <button class="btn btn-left" onclick="moverCarrusel(-1)">&#10094;</button>
+        
+        <div class="carrusel-wrapper">
+            <div class="carrusel" id="carrusel">
+                <!--PRODUCTO 1-->
+                <div class="producto">
+                    <img src="img/producCarrusel/sudadera.png" alt="Sudadera">
+                    <p>Sudadera con capucha mágica de Hogwarts</p>
+                    <p class="precio">$50.00</p>
+                    <div class="contenedor-selector">
+                        <button class="botones" onclick="decrementar(this)">−</button>
+                            <input type="text" class="input-numero" value="1" readonly>
+                        <button class="botones" onclick="incrementar(this)">+</button>
+                    </div>
+                    <div class="dropdownn1">
+                        <button class="talla boton-talla" data-talla="">Tallas<img src="img/flecha.ico" id="flechaicon" alt="Icono"></button>
+                        <button class="talla">Sexo: M</button>
+                        <div class="dropdownn1-content">
+                            <a onclick="seleccionarTalla(this)">S</a>
+                            <a onclick="seleccionarTalla(this)">M</a>
+                            <a onclick="seleccionarTalla(this)">L</a>
+                        </div>
+                    </div>
+                    <a class="btn-cesta" type="button" class="btn btn-primary" 
+                     data-bs-whatever="@fat" onclick="mostrarSuccessModal(event)">Agregar al Carrito</a>
+                </div>
+                <!--PRODUCTO 2-->
+                <div class="producto">
+                    <img src="img/producCarrusel/pinza.png" alt="Pinza">
+                    <p>Pinza para el pelo mágica de Hogwarts</p>
+                    <p class="precio">$12.00</p>
+                    <div class="contenedor-selector">
+                        <button class="botones" onclick="decrementar(this)">−</button>
+                            <input type="text" class="input-numero" value="1" readonly>
+                        <button class="botones" onclick="incrementar(this)">+</button>
+                    </div>
+                    <div class="dropdownn1">
+                        <button class="talla boton-talla" data-talla="">Tallas<img src="img/flecha.ico" id="flechaicon" alt="Icono"></button>
+                        <button class="talla">Sexo: M</button>
+                        <div class="dropdownn1-content">
+                            <a onclick="seleccionarTalla(this)">S</a>
+                            <a onclick="seleccionarTalla(this)">M</a>
+                            <a onclick="seleccionarTalla(this)">L</a>
+                        </div>
+                    </div>
+                    <a class="btn-cesta" type="button" class="btn btn-primary" 
+                     data-bs-whatever="@fat" onclick="mostrarSuccessModal(event)">Agregar al Carrito</a>
+                </div>
+                <!--PRODUCTO 3-->
+                <div class="producto">
+                    <img src="img/producCarrusel/camiseta.png" alt="Camiseta">
+                    <p>Camiseta mágica de Hogwarts</p>
+                    <p class="precio">$25.00</p>
+                    <div class="contenedor-selector">
+                        <button class="botones" onclick="decrementar(this)">−</button>
+                            <input type="text" class="input-numero" value="1" readonly>
+                        <button class="botones" onclick="incrementar(this)">+</button>
+                    </div>
+                    <div class="dropdownn1">
+                        <button class="talla boton-talla" data-talla="">Tallas<img src="img/flecha.ico" id="flechaicon" alt="Icono"></button>
+                        <button class="talla">Sexo: M</button>
+                        <div class="dropdownn1-content">
+                            <a onclick="seleccionarTalla(this)">S</a>
+                            <a onclick="seleccionarTalla(this)">M</a>
+                            <a onclick="seleccionarTalla(this)">L</a>
+                        </div>
+                    </div>
+                    <a class="btn-cesta" type="button" class="btn btn-primary" 
+                     data-bs-whatever="@fat" onclick="mostrarSuccessModal(event)">Agregar al Carrito</a>
+                </div>
+                <!--PRODUCTO 4-->
+                <div class="producto">
+                    <img src="img/producCarrusel/jersey.png" alt="Jersey">
+                    <p>Jersey con el espíritu mágico de Hogwarts</p>
+                    <p class="precio">$55.00</p>
+                    <div class="contenedor-selector">
+                        <button class="botones" onclick="decrementar(this)">−</button>
+                            <input type="text" class="input-numero" value="1" readonly>
+                        <button class="botones" onclick="incrementar(this)">+</button>
+                    </div>
+                    <div class="dropdownn1">
+                        <button class="talla boton-talla" data-talla="">Tallas<img src="img/flecha.ico" id="flechaicon" alt="Icono"></button>
+                        <button class="talla">Sexo: M</button>
+                        <div class="dropdownn1-content">
+                            <a onclick="seleccionarTalla(this)">S</a>
+                            <a onclick="seleccionarTalla(this)">M</a>
+                            <a onclick="seleccionarTalla(this)">L</a>
+                        </div>
+                    </div>
+                    <a class="btn-cesta" type="button" class="btn btn-primary" 
+                     data-bs-whatever="@fat" onclick="mostrarSuccessModal(event)">Agregar al Carrito</a>
+                </div>
+                <!--PRODUCTO 5-->
+                <div class="producto">
+                    <img src="img/producCarrusel/calcetines.png" alt="Calcetines">
+                    <p>Calcetines mágicos de Hogwarts</p>
+                    <p class="precio">$6.00</p>
+                    <div class="contenedor-selector">
+                        <button class="botones" onclick="decrementar(this)">−</button>
+                            <input type="text" class="input-numero" value="1" readonly>
+                        <button class="botones" onclick="incrementar(this)">+</button>
+                    </div>
+                    <div class="dropdownn1">
+                        <button class="talla boton-talla" data-talla="">Tallas<img src="img/flecha.ico" id="flechaicon" alt="Icono"></button>
+                        <button class="talla">Sexo: M</button>
+                        <div class="dropdownn1-content">
+                            <a onclick="seleccionarTalla(this)">S</a>
+                            <a onclick="seleccionarTalla(this)">M</a>
+                            <a onclick="seleccionarTalla(this)">L</a>
+                        </div>
+                    </div>
+                    <a class="btn-cesta" type="button" class="btn btn-primary" 
+                     data-bs-whatever="@fat">Agregar al Carrito</a>
+                </div>
+            </div>
+        </div>                    
+        <!-- Botón derecho -->
+        <button class="btn btn-right" onclick="moverCarrusel(1)">&#10095;</button>
+    </div>
+</div>
+    <!-- FIN DE CARRUSEL DE PRODUCTOS -->
+
+        <!-- INICIO DE PIE DE PÁGINA WEB -->
+        <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+            <div class="row pt-5">
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <a href="" class="navbar-brand">
+                        <h1 class="text-primary">HOGWARTS</h1>
+                    </a>
+                    <p>Mundo Mágico de Harry Potter ✨⚡     
+                    <br>Sumérgete en el increíble universo de Harry Potter, donde la magia, 
+                        la amistad y la aventura cobran vida. Desde el majestuoso castillo de Hogwarts 
+                        hasta los misterios del Callejón Diagon, cada rincón de este mundo está lleno de 
+                        sorpresas y hechizos por descubrir. 
+                    <br><br>¡Explora las casas de Hogwarts, aprende encantamientos y vive la magia como nunca antes!
+                    <br><br>"La felicidad se puede encontrar incluso en los tiempos más oscuros, si uno solo recuerda encender la luz." 
+                    <br>- Albus Dumbledore.</p>
+                    <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                    <div class="d-flex justify-content-start">
+                        <a class=" btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class=" btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class=" btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class=" btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
+                        <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
+                        <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                    <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                    <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="row">
+                <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white-50">Copyright &copy; <a style="color: rgb(39, 197, 39);">Domain</a>. All Rights Reserved.</a>
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center text-md-right">
+                    <p class="m-0 text-white-50">Designed by <a style="color: rgb(39, 197, 39);">Carlos Ernesto Arteaga Rosales</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- FIN DE PIE DE PÁGINA WEB -->
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/carrusel.js"></script>
+    <script src="js/validacionesmodal.js"></script>
+</body>
+
+</html>

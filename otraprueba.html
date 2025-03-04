@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Registro de Usuario</h2>
+        <form id="registroForm">
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <p class="error" id="errorNombre">El nombre debe tener al menos 3 letras y no contener números.</p>
+
+            <input type="date" id="fechaNacimiento" required>
+            <p class="error" id="errorFecha">Debe seleccionar una fecha de nacimiento.</p>
+
+            <input type="file" id="imagenInput" accept="image/*" required>
+            <p class="error" id="errorImagen">Debe seleccionar una imagen.</p>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("registroForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById("nombre").value.trim();
+            const fecha = document.getElementById("fechaNacimiento").value;
+            const imagen = document.getElementById("imagenInput").files[0];
+
+            const errorNombre = document.getElementById("errorNombre");
+            const errorFecha = document.getElementById("errorFecha");
+            const errorImagen = document.getElementById("errorImagen");
+            let valid = true;
+
+            // Validaciones
+            if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,}$/.test(nombre)) {
+                errorNombre.style.display = "block";
+                valid = false;
+            } else {
+                errorNombre.style.display = "none";
+            }
+
+            if (fecha === "") {
+                errorFecha.style.display = "block";
+                valid = false;
+            } else {
+                errorFecha.style.display = "none";
+            }
+
+            if (!imagen) {
+                errorImagen.style.display = "block";
+                valid = false;
+            } else {
+                errorImagen.style.display = "none";
+            }
+
+            if (valid) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const imagenBase64 = event.target.result;
+                    localStorage.setItem("nombre", nombre);
+                    localStorage.setItem("fechaNacimiento", fecha);
+                    localStorage.setItem("imagen", imagenBase64);
+                    window.location.href = "mostrar.html"; // Redirigir a la página de muestra
+                };
+                reader.readAsDataURL(imagen);
+            }
+        });
+
+        document.getElementById("nombre").addEventListener("input", function() {
+            this.value = this.value.replace(/[0-9]/g, '');
+        });
+    </script>
+
+</body>
+</html>

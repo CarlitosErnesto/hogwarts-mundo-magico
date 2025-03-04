@@ -1,0 +1,161 @@
+.carrusel-container {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 40px 0;
+  }
+
+  .carrusel-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carrusel {
+    display: flex;
+    gap: 20px; /* Para escritorio */
+    transition: transform 0.5s ease-in-out;
+  }
+  /* En pantallas grandes: 3 productos visibles */
+  .producto {
+    min-width: calc(33.33% - 15px);
+    background: #131a3f;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .producto img {
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #2532a4;
+  }
+  .producto p {
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+
+  .precio {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .talla {
+    margin: 10px 0;
+    background: #af9d9d;
+    color: white;
+    padding: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  .btn-cesta {
+    display: block;
+    background: #3b3f60;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+
+  .btn-cesta:hover {
+    background: #5a5f90;
+  }
+  /* Botones de navegación */
+  .btn {
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  .btn-left {
+    left: 0;
+  }
+
+  .btn-right {
+    right: 0;
+  }
+
+  .btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  /* =========================
+       MEDIA QUERY: hasta 800px
+       (tablets y móviles)
+    ========================== */
+    @media (max-width: 800px) {
+
+        /* Contenedor un poco más ancho y menos padding vertical */
+        .carrusel-container {
+          width: 90%;
+          padding: 10px 0;
+        }
+  
+        /* Elimina el gap para no mostrar parte del siguiente producto */
+        .carrusel {
+          gap: 20px; /* Se fuerza a 0 para que sólo se vea uno */
+        }
+  
+        /* Fuerza a que cada producto ocupe ~80% del contenedor y quede centrado */
+        .producto {
+          flex: 0 0 80% !important;  /* Sobrescribe la regla de escritorio */
+          margin: 0 auto;
+          padding: 10px;
+          background: #131a3f;
+          border-radius: 8px;
+          min-width: auto !important; /* Elimina el min-width de escritorio */
+          width: 72px;
+        }
+  
+        /* Ajusta la imagen para que no sea demasiado alta en móvil */
+        .producto img {
+          max-height: 300px; /* Ajusta según prefieras */
+          height: auto;
+        }
+  
+        /* Texto algo más pequeño */
+        .producto p {
+          font-size: 14px;
+        }
+  
+        .precio {
+          font-size: 16px;
+        }
+  
+        .btn-cesta {
+          margin: 8px auto;
+          width: 50%;
+          font-size: 14px;
+        }
+  
+        /* Botones de navegación más pequeños */
+        .btn {
+          padding: 20px;
+          position: relative;
+        }
+        .btn-left {
+            left: 0;
+            margin-bottom: -175%;
+          }
+        
+          .btn-right {
+            margin-left: 86%;
+            margin-top: -90%;
+          }
+      }
+
