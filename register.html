@@ -24,32 +24,6 @@
     <p id="message"></p> <!-- Mensaje de error o éxito -->
         <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
     </div>
-    <script>/*
-        function register() {
-            let user = document.getElementById("newUser").value.trim();
-            let email = document.getElementById("newEmail").value.trim();
-            let pass = document.getElementById("newPassword").value.trim();
-            let message = document.getElementById("message");
-
-            if (user && pass && email) {
-                localStorage.setItem("user", user);
-                localStorage.setItem("email", email);
-                localStorage.setItem("pass", pass);
-                message.textContent = "Iniciando sesión...";
-                message.style.color = "green"; // Mensaje de éxito en verde
-
-                // Redirigir automáticamente al index
-                setTimeout(function() {
-                    localStorage.setItem("authUser", user); // Loguea automáticamente al usuario
-                    window.location.href = "index.html"; // Redirigir al index
-                }, 1000); // Espera 1.5 segundos para mostrar el mensaje
-            } else {
-                message.textContent = "Por favor, llena todos los campos";
-                message.style.color = "red"; // Mensaje de error en rojo
-                message.style.fontSize= "20px";
-            }
-        }*/
-    </script>
     <script src="js/validacioneslog.js"></script>
 </body>
 </html>

@@ -20,28 +20,6 @@
     <p id="error-message" class="error-message"></p> <!-- Mensaje de error -->
     <p>¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
 </div>
-
-<script>/*
-    function login() {
-        let user = document.getElementById("username").value.trim();
-        let pass = document.getElementById("password").value.trim();
-        let email = document.getElementById("email").value.trim(); //////////agregado
-        let errorMessage = document.getElementById("error-message");
-
-        let savedUser = localStorage.getItem("user");
-        let savedPass = localStorage.getItem("pass");
-        let savedEmail = localStorage.getItem("email");
-
-        if (user === "" || pass === "" || email === "") {
-            errorMessage.textContent = "Ingresar credenciales";
-        } else if (user === savedUser && pass === savedPass && email === savedEmail) {
-            localStorage.setItem("authUser", user);
-            window.location.href = "index.html";
-        } else {
-            errorMessage.textContent = "Credenciales incorrectas";
-        }
-    }*/
-</script>
 <script src="js/validacioneslog.js"></script>
 </body>
 </html>
