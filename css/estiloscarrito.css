@@ -1,0 +1,23 @@
+.btn-carrito{
+    background-color: rgb(37, 37, 95);
+    border-radius: 5px;
+    padding: 10px;
+    border: solid rgb(73, 73, 153);
+    color: white;
+    margin-left: 77.5%;
+    margin-top: 20px;
+}
+.btn-carrito:hover{
+    background-color: rgb(34, 34, 66);
+}
+
+
+.btn-comprarC{
+    background-color: green;    
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.btn-comprarC:hover{
+    background-color:   rgb(3, 100, 3);
+}

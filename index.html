@@ -27,6 +27,7 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estiloCarrusel.css">
+    <link rel="stylesheet" href="css/estiloscarrito.css">
 
     <!--Fuente extras-->
     <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
@@ -405,7 +406,7 @@
 <!-- //////////////////////////////////////////// Button trigger modal//////////////////////////////////////////// -->
 
 <!-- BOTÓN PARA ABRIR EL CARRITO -->
-<button type="button" class="btn-cesta btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn-carrito" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Carrito de Compras
 </button>
 
@@ -418,11 +419,13 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <div id="carritoProductos">
                 <!-- Aquí puedes agregar el contenido del carrito -->
+                </div>
             </div>
             <div class="modal-footer">
                 <!-- BOTÓN PARA ABRIR LA RESERVACIÓN (AHORA FUERA DEL MODAL) -->
-                <button type="button" class="btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalReserva">
+                <button type="button" class="btn-comprarC" data-bs-toggle="modal" data-bs-target="#exampleModalReserva">
                     Comprar
                 </button>
             </div>
@@ -745,5 +748,6 @@
     <script src="js/carrusel.js"></script>
     <script src="js/validacionesmodal.js"></script>
     <script src="js/cerrarsesion.js"></script>
+    <script src="js/carritoProductos.js"></script>
 </body>
 </html>
