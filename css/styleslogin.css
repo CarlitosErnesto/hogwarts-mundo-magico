@@ -18,6 +18,10 @@ body {
     padding: 20px;
     text-align: center;
 }
+.imagenPotter{
+    width: 72%;
+    margin-bottom: -8%;
+}
 
 /* 📱 Imagen diferente para teléfonos */
 @media (max-width: 768px) {
@@ -26,8 +30,11 @@ body {
         background-size: cover;
         background-position: center;
     }
+    .imagenPotter{
+        width: 90%;
+        margin-top: -10%;
+    }
 }
-
 
 .container {
     width: 100%;
@@ -39,6 +46,8 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     color: white;
+    margin-top: 8%;
+    position: static;
 }
 
 h2 {
