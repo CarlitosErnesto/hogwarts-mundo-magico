@@ -31,6 +31,12 @@
     <!--Fuente extras-->
     <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/lucky-shoes" rel="stylesheet">
+    <script>
+        // Verificar si el usuario está autenticado, si no lo está, redirigir a login
+        if (!localStorage.getItem("authUser")) {
+            window.location.href = "login.html"; // Redirigir si no está autenticado
+        }
+    </script>
 </head>
 <body>
     <!-- Topbar Start -->
@@ -49,7 +55,6 @@
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
@@ -65,7 +70,6 @@
                         <a href="index.html" class="nav-item nav-link active">Inicio</a>
                         <a href="casas.html" class="nav-item nav-link">Casas</a>
                         <a href="personajes.html" class="nav-item nav-link">Personajes</a>
-                        <a href="avatar.html" class="nav-item nav-link">Crear Avatar</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Libros</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
@@ -79,6 +83,12 @@
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contáctanos</a>
+                        <button style="width: 100%; max-width: 130px; padding: 4px 16px; background: #2f4d6d; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s ease; 
+                            font-size: 14px; margin: 30px auto;" 
+                            onmouseover="this.style.background='#0056b3'" 
+                            onmouseout="this.style.background='#007BFF'" onclick="cerrarSesion()">
+                            Cerrar Sesión
+                        </button>   
                     </div>
                 </div>
             </nav>
@@ -734,6 +744,6 @@
     <script src="js/main.js"></script>
     <script src="js/carrusel.js"></script>
     <script src="js/validacionesmodal.js"></script>
+    <script src="js/cerrarsesion.js"></script>
 </body>
-
 </html>

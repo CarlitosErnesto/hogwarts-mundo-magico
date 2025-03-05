@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/fondologin-pc.jpg"); /* Imagen por defecto para PC */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 📱 Imagen diferente para teléfonos */
+@media (max-width: 768px) {
+    body {
+        background-image: url("../img/fondologin-movil.jpg"); /* Imagen para móviles */
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(28, 37, 58, 0.9); /* 0.5 es 50% de transparencia */
+    border: solid 2px rgba(35, 52, 92);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #58bd1e;
+}
+h1{
+    font-family: 'Harry Potter';
+    position:absolute;
+    margin-bottom: 35%;
+    font-size: 4em;
+    color: #58bd1e;
+    text-shadow: rgb(2, 31, 2) 5px 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: solid 3px rgb(85, 213, 25);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007BFF;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    background: #3175bf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+a {
+    color: #58bd1e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para los mensajes de error */
+.error-message {
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    input, button {
+        padding: 12px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+    h1{
+        font-family: 'Harry Potter';
+        position:absolute;
+        margin-bottom: 140%;
+        font-size: 3em;
+        color: greenyellow;
+        text-shadow: rgb(2, 31, 2) 5px 5px;
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+.success-message {
+    color: green;
+    font-size: 12px;
+}

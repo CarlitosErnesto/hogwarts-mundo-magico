@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleslogin.css">
+    <link href="img/icoHogwarts.ico" rel="icon">
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+</head>
+<body>
+    <h1>Harry Potter</h1>
+<div class="container">
+    <h2>Iniciar Sesión</h2>
+    <input type="text" id="username" placeholder="Usuario" required>
+    <input type="email" id="email" placeholder="Correo" required>
+    <input type="password" id="password" placeholder="Contraseña" required>
+    <button onclick="login()">Ingresar</button>
+    <p id="error-message" class="error-message"></p> <!-- Mensaje de error -->
+    <p>¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
+</div>
+
+<script>/*
+    function login() {
+        let user = document.getElementById("username").value.trim();
+        let pass = document.getElementById("password").value.trim();
+        let email = document.getElementById("email").value.trim(); //////////agregado
+        let errorMessage = document.getElementById("error-message");
+
+        let savedUser = localStorage.getItem("user");
+        let savedPass = localStorage.getItem("pass");
+        let savedEmail = localStorage.getItem("email");
+
+        if (user === "" || pass === "" || email === "") {
+            errorMessage.textContent = "Ingresar credenciales";
+        } else if (user === savedUser && pass === savedPass && email === savedEmail) {
+            localStorage.setItem("authUser", user);
+            window.location.href = "index.html";
+        } else {
+            errorMessage.textContent = "Credenciales incorrectas";
+        }
+    }*/
+</script>
+<script src="js/validacioneslog.js"></script>
+</body>
+</html>

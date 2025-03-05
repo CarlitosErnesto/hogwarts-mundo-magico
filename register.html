@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleslogin.css">
+    <link href="img/icoHogwarts.ico" rel="icon">
+</head>
+<body>
+    <div class="container">
+        <h2>Registro</h2>
+    <input type="text" id="newUser" placeholder="Usuario" oninput="validateUser()" required>
+    <span id="userMessage" class="error-message"></span><br><br>
+
+    <input type="text" id="newEmail" placeholder="Correo" oninput="validateEmail()" required>
+    <span id="emailMessage" class="error-message"></span><br><br>
+
+    <input type="password" id="newPassword" placeholder="Contraseña" oninput="validatePassword()" required>
+    <span id="passMessage" class="error-message"></span><br><br>
+
+    <button onclick="register()">Registrar</button>
+    <p id="message"></p> <!-- Mensaje de error o éxito -->
+        <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+    </div>
+    <script>/*
+        function register() {
+            let user = document.getElementById("newUser").value.trim();
+            let email = document.getElementById("newEmail").value.trim();
+            let pass = document.getElementById("newPassword").value.trim();
+            let message = document.getElementById("message");
+
+            if (user && pass && email) {
+                localStorage.setItem("user", user);
+                localStorage.setItem("email", email);
+                localStorage.setItem("pass", pass);
+                message.textContent = "Iniciando sesión...";
+                message.style.color = "green"; // Mensaje de éxito en verde
+
+                // Redirigir automáticamente al index
+                setTimeout(function() {
+                    localStorage.setItem("authUser", user); // Loguea automáticamente al usuario
+                    window.location.href = "index.html"; // Redirigir al index
+                }, 1000); // Espera 1.5 segundos para mostrar el mensaje
+            } else {
+                message.textContent = "Por favor, llena todos los campos";
+                message.style.color = "red"; // Mensaje de error en rojo
+                message.style.fontSize= "20px";
+            }
+        }*/
+    </script>
+    <script src="js/validacioneslog.js"></script>
+</body>
+</html>
