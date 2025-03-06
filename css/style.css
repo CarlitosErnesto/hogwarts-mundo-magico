@@ -6158,7 +6158,7 @@ button.bg-danger:focus {
 }
 
 #resumen{
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(68, 48, 111, 0.90);
   box-shadow: 20px 30px 30px rgba(30, 144, 255, 0.15);
   border-radius: 10px;
   font-family: 'Harry Potter', sans-serif;                       
