@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>HOGWARTS - Magia y Hechicería</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- icono -->
+    <link href="img/icoHogwarts.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estiloCarrusel.css">
+    <link rel="stylesheet" href="css/estiloscarrito.css">
+
+    <!--Fuente extras-->
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/lucky-shoes" rel="stylesheet">
+    <script>
+        // Verificar si el usuario está autenticado, si no lo está, redirigir a login
+        if (!localStorage.getItem("authUser")) {
+            window.location.href = "login.html"; // Redirigir si no está autenticado
+        }
+    </script>
+</head>
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid /*bg-light*/ pt-3 d-none d-lg-block"> <!--bg-ligh es para cambiar el fondo atrás del nav-->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <p class="parte-superior">Conoce y crea en el mundo Mágico</p>
+                        <p class="text-body px-3 parte-superior">|</p>
+                        <p class="parte-superior">Harry Potter</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5" style="background-color: #1E1E1E;"> <!-- el style es para darle color al fondo del nav-->
+                <a href="" class="navbar-brand">
+                    <h1 class="m-0 text-primary">HOGWARTS</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Inicio</a>
+                        <a href="casas.html" class="nav-item nav-link">Casas</a>
+                        <a href="crearVarita.html" class="nav-item nav-link">Crear Varita</a>
+                        </div>
+                        <a href="#" class="nav-item nav-link">Productos y Comentarios</a>
+                        <button style="width: 100%; max-width: 130px; padding: 4px 16px; background: #2f82ff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.1s ease; 
+                            font-size: 14px; margin: 30px auto;" 
+                            onmouseover="this.style.background='#0056b3'" 
+                            onmouseout="this.style.background='#007BFF'" onclick="cerrarSesion()">
+                            Cerrar Sesión
+                        </button>   
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-5.jpg" alt="Image">
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-8.jpg" alt="Image">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End --> <br><br><br><br>
+    <!-- INICIO DE MODAL DE REGISTRO EXITOSO -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Éxito</h1>
+                    <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center">
+                        <div id="successIcon" class="checkmark-circle">
+                            <div class="background"></div>
+                            <div class="checkmark draw"></div>
+                        </div>
+                    </div>
+                    <h4 class="mt-3 text-success">Registrado exitosamente</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- FIN DE MODAL DE REGISTRO EXITOSO -->
+<!-- INICIO DE CARRUSEL DE PRODUCTOS -->
+<div>
+    <h1 style="color:  rgb(255, 255, 255); font-family: 'Harry Potter', sans-serif; font-size: 80px; 
+            text-shadow: green 5px 5px 10px; font-style:oblique; text-align: center;">Todo relacionado<br>a Hogwarts</h1>
+<!-- //////////////////////////////////////////// Button trigger modal//////////////////////////////////////////// -->
+<!-- BOTÓN PARA ABRIR EL CARRITO -->
+<button type="button" class="btn-carrito" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Carrito de Compras
+</button>
+<!-- //////////////////////////////////////////// MODAL CARRITO DE COMPRAS //////////////////////////////////////////// -->
+<div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito de Compras</h1>
+                <button type="button" class="btn-close btn-close-reserva" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carritoProductos">
+                <!-- Aquí puedes agregar el contenido del carrito -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!-- BOTÓN PARA ABRIR LA RESERVACIÓN (AHORA FUERA DEL MODAL) -->
+                <button type="button" class="btn-comprarC" data-bs-toggle="modal" data-bs-target="#exampleModalReserva">
+                    Confirmar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //////////////////////////////////////////// MODAL DE RESERVACIÓN //////////////////////////////////////////// -->
+<div class="modal bg-luz-sutil" id="exampleModalReserva" tabindex="-1" aria-labelledby="exampleModalReservaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content modal-contentReservacion">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Caja registradora</h1>
+                    <button type="button" class="btn-close btn-close-reserva" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body modalreserva-body">
+                    <h1 class="modal-title fs-5"><h1><img class="imgPotter" src="img/harrypotterlog.png" alt=""></h1></h1>
+                    <form id="compraForm">
+                            <div>
+                            <div class="mb-2">
+                                <label for="nombres" class="col-form-label">Datos del cliente:</label>
+                                <div class="mb-3">
+                                    <label for="nombres" class="col-form-label"><input type="text" class="form-control input-cajareserva inputDataClient" id="nombres" placeholder="Usuario Registrado" readonly></label>
+                                    <label for="direccion" class="col-form-label"><input type="text" class="form-control input-cajareserva inputDataClient" id="direccion" placeholder="usuario@correo.com" readonly></label>
+                                </div>
+                            </div>
+                            <label class="col-form-label completaloscampos">Completa los siguientes campos:</label>
+                            <div class="mb-3">
+                                <label for="telefono" class="col-form-label">Entrega:</label>
+                                <div class="dropdown">
+                                    <button id="dropdownBtn" class="btn-secondary dropdown-toggle input-cajareserva1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        País
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" onclick="selectDestination('Guatemala')">Guatemala</a></li>
+                                        <li><a class="dropdown-item" onclick="selectDestination('Honduras')">Honduras</a></li>
+                                        <li><a class="dropdown-item" onclick="selectDestination('El Salvador')">El Salvador</a></li>
+                                        <li><a class="dropdown-item" onclick="selectDestination('Nicaragua')">Nicaragua</a></li>
+                                        <li><a class="dropdown-item" onclick="selectDestination('Costa Rica')">Costa Rica</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Dropdown de Departamento/Provincia -->
+                            <div class="mb-3">
+                                <div class="dropdown">
+                                    <button id="regionBtn" class="btn-secondary dropdown-toggle input-cajareserva1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Departamento
+                                    </button>
+                                    <ul id="regionMenu" class="dropdown-menu"></ul>
+                                </div>
+                            </div>
+                            <div class="mb-3"> <!--LA FUNCIÓN DEL INPUT, ESTÁ EN EL ARCHIVO "validacionCaja.js"-->
+                                <input type="text" class="form-control" id="input-direccionreserva" 
+                                    placeholder="Dirección, ej: Calle 5, Zona 3" required>
+                                <small class="text-danger" id="direccionError"></small>
+                            </div>
+                            <div class="mb-3"> <!--LA FUNCIÓN DEL INPUT, ESTÁ EN EL ARCHIVO "validacionCaja.js"-->
+                                <input type="text" class="form-control" id="input-telefono" placeholder="Teléfono" required>
+                                <small class="text-danger" id="telefonoError"></small>
+                            </div>   
+                            <div class="mb-3">
+                                <label for="miCheckbox" class="form-check-label"><input type="checkbox" id="miCheckbox" 
+                                    class="form-check-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    Guarde esta información para la próxima vez.</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="metodopago" class="col-form-label">Método de envío:</label>
+                            <div id="metodopago" class="form-control input-cajareserva" readonly>
+                                <strong>Encomendista hacia </strong><span id="paisNombre" class="font-italic"></span>:<br>
+                                <strong>- </strong><span id="encomendistaNombre"></span><br>
+                                <strong>Precio por envío: </strong><span id="precioEncomendista"></span>
+                            </div>
+                        </div>  
+                        <div class="mb-3">
+                            <label class="form-label">Derechos e impuestos:</label>
+                            <div class="contenedor-radio-input">
+                                <label class="radio-input">
+                                    <input type="radio" id="opcion1" name="opciones" value="opcion1">
+                                    <span class="texto-radio"><p class="estilosDereImpue1">Pagar ahora.</p><p class="estilosDereImpue">Sin cargos adicionales por envío.</p></span>
+                                </label>
+                                <label class="radio-input">
+                                    <input type="radio" id="opcion2" name="opciones" value="opcion2">
+                                    <span class="texto-radio"><p class="estilosDereImpue1">Pagar contra entrega.</p><p class="estilosDereImpue">Sin cargos adicionales por envío.</p></span>
+                                </label>
+                            </div>
+                        </div>  
+                        <div id="tarjetacard">
+                            <div style="border: solid black 1px; margin: -2.5%; padding: 10px; border-radius: 5px 5px 0px 0px;">Tarjeta de Crédito o Débito.
+                                <img src="img/card.ico" alt="Ícono tarjeta" width="20" style="margin-left: 40%;"><br></div>
+                            <div class="mb-2">
+                                <label for="nombres" class="col-form-label" style="margin-top: 2%;">Pago:</label>
+                                <div class="mb-3">
+                                    <label class="col-form-label">Número de Tarjeta:</label>
+                                    <input type="text" class="form-control input-cajareserva inputDataClient" 
+                                        id="numerotarjeta" placeholder="1234 5678 9012 3456" required style="width: 100%;"><br>
+                                    <label placeholder="1234 5678 9012 3456" required style="width: 100%;">Nombre en la Tarjeta:</label>
+                                    <input type="text" class="form-control input-cajareserva inputDataClient" 
+                                        id="nombretarjeta" placeholder="Nombre Apellido" required style="width: 100%;"><br>
+                                    <label for="expiryDate">Fecha de Expiración:</label>
+                                    <input type="month" id="expiryDate" required style="width: 61%; border-radius: 5px;">
+                                    <div class="mb-2">
+                                        <div class="mb-3">
+                                            <label for="nombres" class="col-form-label">CVV:<input type="text" class="form-control input-cajareserva inputDataClient" 
+                                                id="nombres" placeholder="123" required style="width: 61%; border-radius: 5px";></label>
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="dob">Fecha de Nacimiento:</label>
+                                            <input type="date" id="dob" required style="width: 61%; border-radius: 5px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>                                                             
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-primary btn-enviar" type="submit" form="compraForm" onclick="mostrarmodalsatisfactorio()" style="margin-bottom: 10%; color: white; background-color: rgb(138, 109, 35); :hover{background-color: green};">¡Pagar ahora!</button>
+                </div>
+                <!-- Botón para abrir el modal -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="comprarealizada" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content text-center p-4" style="border-radius: 5px; background-color: rgb(75, 111, 42);">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">Éxito</h1>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="d-flex justify-content-center">
+                                            <div id="successIcon" class="checkmark-circle">
+                                                <div class="background"></div>
+                                                <div class="checkmark draw"></div>
+                                            </div>
+                                        </div>
+                                        <h4 class="mt-3 text-success colorcompra" style="color: white;">¡Compra realizada!</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <style>
+                            /* Estilos del ícono de éxito */
+                            .checkmark-circle {
+                                width: 80px;
+                                height: 80px;
+                                position: relative;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: #0e3e19;
+                                animation: zoomIn 0.4s ease-in-out;
+                            }
+
+                            .checkmark {
+                                width: 30px;
+                                height: 50px;
+                                border-right: 5px solid white;
+                                border-bottom: 5px solid white;
+                                transform: rotate(45deg);
+                                position: absolute;
+                                top: 20%;
+                                left: 35%;
+                                animation: drawCheck 1s ease-out forwards;
+                            }
+
+                            /* Animaciones */
+                            @keyframes zoomIn {
+                                from { transform: scale(0); opacity: 0; }
+                                to { transform: scale(1); opacity: 1; }
+                            }
+
+                            @keyframes drawCheck {
+                                from { height: 0; width: 0; }
+                                to { height: 50px; width: 30px; }
+                            }
+                        </style>
+
+                        <script>
+                            function mostrarmodalsatisfactorio () {
+                                let modalElement = document.getElementById("comprarealizada");
+                                let successModal = new bootstrap.Modal(modalElement);
+                                successModal.show();
+
+                                // Espera 3 segundos y cierra el modal automáticamente
+                                setTimeout(() => {
+                                    let modalInstance = bootstrap.Modal.getInstance(modalElement);
+                                    if (modalInstance) {
+                                        modalInstance.hide(); // Cierra el modal correctamente
+                                    }
+                                }, 1500);
+                            }
+                        </script>
+            </div>
+        </div>
+    </div>
+</div>        
+<!-- //////////////////////////////////////////// Fin del Modal //////////////////////////////////////////// -->
+    <div class="carrusel-container">
+            
+        <!-- Botón izquierdo -->
+        <button class="btn btn-left" onclick="moverCarrusel(-1)">&#10094;</button>
+        
+        <div class="carrusel-wrapper">
+            <div class="carrusel" id="carrusel">
+                <!--PRODUCTO 1-->
+                <div class="producto">
+                    <img src="img/producCarrusel/sudadera.png" alt="Sudadera">
+                    <p>Sudadera con capucha mágica de Hogwarts</p>
+                    <p class="precio">$50.00</p>
+                    <div class="contenedor-selector">
+                        <button class="botones" onclick="decrementar(this)">−</button>
+                            <input type="text" class="input-numero" value="1" readonly>
+                        <button class="botones" onclick="incrementar(this)">+</button>
+                    </div>
+                    <div class="dropdownn1">
+                        <button class="talla boton-talla" data-talla="">Tallas<img src="img/flecha.ico" id="flechaicon" alt="Icono"></button>
+                        <button class="talla">Sexo: M</button>
+                        <div class="dropdownn1-content">
+                            <a onclick="seleccionarTalla(this)">S</a>
+                            <a onclick="seleccionarTalla(this)">M</a>
+                            <a onclick="seleccionarTalla(this)">L</a>
+                        </div>
+                    </div>
+                    <a class="btn-cesta" type="button" class="btn btn-primary" 
+                     data-bs-whatever="@fat" onclick="mostrarSuccessModal(event)">Agregar al Carrito</a>
+                </div>
+                <!--PRODUCTO 2-->
+                <div class="producto">
+                    <img src="img/producCarrusel/pinza.png" alt="Pinza">
+                    <p>Pinza para el pelo mágica de Hogwarts</p>
+                    <p class="precio">$12.00</p>
+                    <div class="contenedor-selector">
+                        <button class="botones" onclick="decrementar(this)">−</button>
+                            <input type="text" class="input-numero" value="1" readonly>
+                        <button class="botones" onclick="incrementar(this)">+</button>
+                    </div>
+                    <div class="dropdownn1">
+                        <button class="talla boton-talla" data-talla="">Tallas<img src="img/flecha.ico" id="flechaicon" alt="Icono"></button>
+                        <button class="talla">Sexo: M</button>
+                        <div class="dropdownn1-content">
+                            <a onclick="seleccionarTalla(this)">S</a>
+                            <a onclick="seleccionarTalla(this)">M</a>
+                            <a onclick="seleccionarTalla(this)">L</a>
+                        </div>
+                    </div>
+                    <a class="btn-cesta" type="button" class="btn btn-primary" 
+                     data-bs-whatever="@fat" onclick="mostrarSuccessModal(event)">Agregar al Carrito</a>
+                </div>
+                <!--PRODUCTO 3-->
+                <div class="producto">
+                    <img src="img/producCarrusel/camiseta.png" alt="Camiseta">
+                    <p>Camiseta mágica de Hogwarts</p>
+                    <p class="precio">$25.00</p>
+                    <div class="contenedor-selector">
+                        <button class="botones" onclick="decrementar(this)">−</button>
+                            <input type="text" class="input-numero" value="1" readonly>
+                        <button class="botones" onclick="incrementar(this)">+</button>
+                    </div>
+                    <div class="dropdownn1">
+                        <button class="talla boton-talla" data-talla="">Tallas<img src="img/flecha.ico" id="flechaicon" alt="Icono"></button>
+                        <button class="talla">Sexo: M</button>
+                        <div class="dropdownn1-content">
+                            <a onclick="seleccionarTalla(this)">S</a>
+                            <a onclick="seleccionarTalla(this)">M</a>
+                            <a onclick="seleccionarTalla(this)">L</a>
+                        </div>
+                    </div>
+                    <a class="btn-cesta" type="button" class="btn btn-primary" 
+                     data-bs-whatever="@fat" onclick="mostrarSuccessModal(event)">Agregar al Carrito</a>
+                </div>
+                <!--PRODUCTO 4-->
+                <div class="producto">
+                    <img src="img/producCarrusel/jersey.png" alt="Jersey">
+                    <p>Jersey con el espíritu mágico de Hogwarts</p>
+                    <p class="precio">$55.00</p>
+                    <div class="contenedor-selector">
+                        <button class="botones" onclick="decrementar(this)">−</button>
+                            <input type="text" class="input-numero" value="1" readonly>
+                        <button class="botones" onclick="incrementar(this)">+</button>
+                    </div>
+                    <div class="dropdownn1">
+                        <button class="talla boton-talla" data-talla="">Tallas<img src="img/flecha.ico" id="flechaicon" alt="Icono"></button>
+                        <button class="talla">Sexo: M</button>
+                        <div class="dropdownn1-content">
+                            <a onclick="seleccionarTalla(this)">S</a>
+                            <a onclick="seleccionarTalla(this)">M</a>
+                            <a onclick="seleccionarTalla(this)">L</a>
+                        </div>
+                    </div>
+                    <a class="btn-cesta" type="button" class="btn btn-primary" 
+                     data-bs-whatever="@fat" onclick="mostrarSuccessModal(event)">Agregar al Carrito</a>
+                </div>
+                <!--PRODUCTO 5-->
+                <div class="producto">
+                    <img src="img/producCarrusel/calcetines.png" alt="Calcetines">
+                    <p>Calcetines mágicos de Hogwarts</p>
+                    <p class="precio">$6.00</p>
+                    <div class="contenedor-selector">
+                        <button class="botones" onclick="decrementar(this)">−</button>
+                            <input type="text" class="input-numero" value="1" readonly>
+                        <button class="botones" onclick="incrementar(this)">+</button>
+                    </div>
+                    <div class="dropdownn1">
+                        <button class="talla boton-talla" data-talla="">Tallas<img src="img/flecha.ico" id="flechaicon" alt="Icono"></button>
+                        <button class="talla">Sexo: M</button>
+                        <div class="dropdownn1-content">
+                            <a onclick="seleccionarTalla(this)">S</a>
+                            <a onclick="seleccionarTalla(this)">M</a>
+                            <a onclick="seleccionarTalla(this)">L</a>
+                        </div>
+                    </div>
+                    <a class="btn-cesta" type="button" class="btn btn-primary" 
+                     data-bs-whatever="@fat" onclick="mostrarSuccessModal(event)">Agregar al Carrito</a>
+                </div>
+            </div>
+        </div>                    
+        <!-- Botón derecho -->
+        <button class="btn btn-right" onclick="moverCarrusel(1)">&#10095;</button>
+    </div>
+</div><br><br><br>
+    <!-- FIN DE CARRUSEL DE PRODUCTOS -->
+    <!-- Contact Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-3 pb-3">
+                <h1 style="color:  rgb(255, 255, 255); font-family: 'Harry Potter', sans-serif; font-size: 80px; 
+            text-shadow: green 5px 5px 10px; font-style:oblique; text-align: center;">Deja tus comentarios<br>o preguntas...</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form bg-white" style="padding: 30px;">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="form-row">
+                                <div class="control-group col-sm-6">
+                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                                        data-validation-required-message="Usuario" readonly/>
+                                </div>
+                                <div class="control-group col-sm-6">
+                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
+                                        data-validation-required-message="usuario@correo.com" readonly/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
+                                    required="required"
+                                    data-validation-required-message="Please enter your message"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="text-center">
+                                <button class=" btn-primary py-3 px-4" type="submit" id="sendMessageButton" style="background-color: green;">Enviar comentario</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+<script>
+    // Función para validar y mostrar el modal de éxito
+    document.getElementById('sendMessageButton').addEventListener('click', function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe antes de la validación
+
+        // Obtención de los valores del formulario
+        const message = document.getElementById('message').value;
+
+        // Validación de campos
+        if (message.length < 10) {
+            alert('El mensaje debe tener al menos 10 caracteres.');
+            return; // Si el mensaje tiene menos de 10 caracteres, no se muestra la alerta
+        }
+
+        // Si todos los campos son válidos, mostrar el modal de éxito
+        const modal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+        modal.show();
+    });
+</script>
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px; font-size: 25px"></h6>
+                <h1 style="color:  rgb(255, 255, 255); font-family: 'Harry Potter', sans-serif; font-size: 50px; 
+                text-shadow: green 5px 5px 10px; font-style:oblique;">Comentarios relevantes</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="text-center pb-4">
+                    <img class="img-fluid mx-auto" src="img/testimonial-1.jpg" style="width: 100px; height: 100px;" >
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <p class="mt-5" style="color: black;">"¡Excelente experiencia de compra! El proceso fue rápido y la atención al cliente fue increíble."</p>
+                        <h5 class="text-truncate">Chris Hemsworth</h5>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid mx-auto" src="img/testimonial-2.jpg" style="width: 100px; height: 100px;" >
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <p class="mt-5" style="color: black;">"Me encanta la variedad de productos. Siempre encuentro lo que necesito y los envíos son rápidos."</p>
+                        <h5 class="text-truncate">Laura Fernández
+                        </h5>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid mx-auto" src="img/testimonial-3.jpg" style="width: 100px; height: 100px;" >
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <p class="mt-5" style="color: black;">"Muy satisfecho con mi compra. La página es fácil de navegar y los precios son muy competitivos."</p>
+                        <h5 class="text-truncate">Javier Martínez</h5>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid mx-auto" src="img/testimonial-4.jpg" style="width: 100px; height: 100px;" >
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <p class="mt-5" style="color: black;">"El servicio fue puntual y el producto llegó en perfecto estado. Definitivamente volveré a comprar."</p>
+                        <h5 class="text-truncate">Andrés González</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- INICIO DE PIE DE PÁGINA WEB -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="text-primary">HOGWARTS</h1>
+                </a>
+                <p>Mundo Mágico de Harry Potter ✨⚡     
+                <br>Sumérgete en el increíble universo de Harry Potter, donde la magia, 
+                    la amistad y la aventura cobran vida. Desde el majestuoso castillo de Hogwarts 
+                    hasta los misterios del Callejón Diagon, cada rincón de este mundo está lleno de 
+                    sorpresas y hechizos por descubrir. 
+                <br><br>¡Explora las casas de Hogwarts, aprende encantamientos y vive la magia como nunca antes!
+                <br><br>"La felicidad se puede encontrar incluso en los tiempos más oscuros, si uno solo recuerda encender la luz." 
+                <br>- Albus Dumbledore.</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    <a class=" btn-outline-primary btn-square mr-2" href="https://www.facebook.com/share/14ETx9Wmzbb/"><i class="fab fa-facebook-f"></i></a>
+                    <a class=" btn-outline-primary btn-square" href="https://www.instagram.com/harrypotter?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Partes del Menú</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                    <a class="text-white-50 mb-2" href="casas.html"><i class="fa fa-angle-right mr-2"></i>Casas</a>
+                    <a class="text-white-50 mb-2" href="crearVarita.html"><i class="fa fa-angle-right mr-2"></i>Crear varita</a>
+                    <a class="text-white-50 mb-2" href="producComen.html"><i class="fa fa-angle-right mr-2"></i>Productos y Comentarios</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contáctanos a:</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope mr-2"></i>hogwartsmundo_magico@gmail.com</p> 
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">hoja informativa</h6>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white-50">Copyright &copy; <a style="color: rgb(39, 197, 39);">Dominio</a>.Reservados todos los derechos.</a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <p class="m-0 text-white-50">Diseñado por <a style="color: rgb(39, 197, 39);">Carlos Ernesto Arteaga Rosales</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- FIN DE PIE DE PÁGINA WEB -->
+
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+<script src="js/carrusel.js"></script>
+<script src="js/validacionesmodal.js"></script>
+<script src="js/cerrarsesion.js"></script>
+<script src="js/carritoProductos.js"></script>
+<script src="js/validaciónCaja.js"></script>
+</body>
+</html>
