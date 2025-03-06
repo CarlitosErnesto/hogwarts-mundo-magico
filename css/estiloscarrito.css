@@ -28,8 +28,6 @@
         background-color: rgb(34, 34, 66);
     }
 }
-
-
 .btn-comprarC{
     background-color: green;    
     color: white;
@@ -47,13 +45,12 @@
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
-    background-color: rgb(29, 28, 28);
+    background: rgba(54, 49, 96, 0.9);
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.2);
     outline: 0;
     color: white;
 }
-
 .modalreserva-body{
     color: white;
 }
@@ -78,6 +75,10 @@
     width: 100%;
 }
 #input-telefono{
+    border-radius: 5px;
+    width: 100%;
+}
+.inputpagos{
     border-radius: 5px;
     width: 100%;
 }
@@ -177,6 +178,13 @@
     margin: 0%;
 }
 
+#tarjetacard{
+    background-color: rgb(227, 218, 218);
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
 
 

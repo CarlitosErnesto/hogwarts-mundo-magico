@@ -10024,7 +10024,7 @@ table td{
 }
 
 #exampleModal .modal-content {
-  background-color: #1b1b1b;
+  background: rgba(54, 49, 96, 0.9);
   color: white;
   padding: 20px;
   border-radius: 10px;
@@ -10070,10 +10070,13 @@ table td{
 
 #total-carrito {
   color: var(--green);
+  font-size: 18px;
+  font-family: 'Harry Potter';
 }
 #exampleModalLabel{
   color: var(--green);
 }
+
 /*//////////////////////////////////////////////////////////////////////*/
 
 /* Estilos responsivos */
