@@ -1,3 +1,4 @@
+/*//////////ESTILOS DEL CARRITO/////////*/
 .btn-carrito{
     background-color: rgb(37, 37, 95);
     border-radius: 5px;
@@ -10,6 +11,23 @@
 .btn-carrito:hover{
     background-color: rgb(34, 34, 66);
 }
+.btn-close-reserva{
+    background-color: green;
+}
+@media (max-width: 480px) {
+    .btn-carrito{
+        background-color: rgb(37, 37, 95);
+        border-radius: 5px;
+        padding: 10px;
+        border: solid rgb(73, 73, 153);
+        color: white;
+        margin-left: 28%;
+        margin-top: 10%;
+    }
+    .btn-carrito:hover{
+        background-color: rgb(34, 34, 66);
+    }
+}
 
 
 .btn-comprarC{
@@ -21,3 +39,144 @@
 .btn-comprarC:hover{
     background-color:   rgb(3, 100, 3);
 }
+
+/*//////////ESTILOS DE MODAL RESERVACIÓN/////////*/
+.modal-contentReservacion {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: rgb(29, 28, 28);
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: 0;
+    color: white;
+}
+
+.modalreserva-body{
+    color: white;
+}
+.imgPotter{
+    width: 35%;
+    margin-left: 35%;
+}
+
+.input-cajareserva{
+    border-radius: 5px;
+    margin: 2px;
+}
+.input-cajareserva1{
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    background-color: white;
+}
+
+#input-direccionreserva{
+    border-radius: 5px;
+    width: 100%;
+}
+#input-telefono{
+    border-radius: 5px;
+    width: 100%;
+}
+
+#miCheckbox{
+    border-radius: 5px;
+    margin-left: 0%;
+}
+#metodopago{
+    width: 195%;
+}
+.inputDataClient{
+    width: 195%;
+}
+@media (max-width: 480px) {
+    #metodopago{
+        width: 100%;
+    }
+    .inputDataClient{
+        width: 100%;
+    }
+}
+
+#metodopago {
+    font-size: 16px; /* Tamaño normal */
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    white-space: pre-line; /* Permite saltos de línea */
+    height: auto;
+    width: 100%;
+}
+
+#metodopago .price {
+    font-size: 32px; /* Tamaño grande para el precio */
+    font-weight: bold;
+}
+
+#metodopago .font-italic {
+    font-style: italic;
+}
+
+
+/*//////////////////////////////estilos de método de pago//////////////////////////*/
+/* Estilo del contenedor de los radio buttons */
+.contenedor-radio-input {
+    display: flex;
+    gap: 10px; /* Espacio entre las opciones */
+}
+
+/* Estilo para el label que simula el input */
+.radio-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    background-color: white;
+    color: black;
+    /*font-weight: bold;*/
+}
+
+/* Estilo cuando está seleccionado */
+.radio-input input:checked + .texto-radio {
+    font-weight: bold;
+    color: goldenrod;
+
+}
+
+/* Estilo para el texto dentro del "input" */
+.texto-radio {
+    flex: 1;
+    margin: 0%;
+}
+
+/* Estilo de los radio buttons ocultos */
+.radio-input input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Efecto visual de hover */
+.radio-input:hover {
+    background-color: rgb(222, 214, 214);
+}
+.estilosDereImpue1{
+    font-weight: bold;
+    margin: 0%;
+}
+.estilosDereImpue{
+    font-size: 12px;
+    margin: 0%;
+}
+
+
+
+

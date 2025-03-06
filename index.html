@@ -416,7 +416,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito de Compras</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-reserva" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div id="carritoProductos">
@@ -436,98 +436,166 @@
 <!-- //////////////////////////////////////////// MODAL DE RESERVACIÓN //////////////////////////////////////////// -->
 <div class="modal bg-luz-sutil" id="exampleModalReserva" tabindex="-1" aria-labelledby="exampleModalReservaLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
+            <div class="modal-content modal-contentReservacion">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5">Reservación</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h1 class="modal-title fs-5">Caja registradora</h1>
+                    <button type="button" class="btn-close btn-close-reserva" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <h1 class="modal-title fs-5" style="font-family: 'Harry Potter'; text-align: center;">Harry Potter</h1>
+                <div class="modal-body modalreserva-body">
+                    <h1 class="modal-title fs-5"><h1><img class="imgPotter" src="img/harrypotterlog.png" alt=""></h1></h1>
                     <form id="compraForm">
-                        <div class="mb-3">
-                            <label for="nombres" class="col-form-label text-dark">Nombres:</label>
-                            <input type="text" class="form-control" id="nombres" placeholder="Ingresar nombres" required>
-                            <small class="text-danger" id="nombresError"></small>
-                        </div>
-                        <div class="mb-3">
-                            <label for="apellidos" class="col-form-label text-dark">Apellidos:</label>
-                            <input type="text" class="form-control" id="apellidos" placeholder="Ingresa apellidos" required>
-                            <small class="text-danger" id="apellidosError"></small>
-                        </div>
-                        <div class="mb-3">
-                            <label for="direccion" class="col-form-label text-dark">Dirección:</label>
-                            <input type="text" class="form-control" id="direccion" placeholder="Distrito, Departamento" required>
-                            <small class="text-danger" id="direccionError"></small>
-                        </div>
-                        <div class="mb-3">
-                            <label for="telefono" class="col-form-label text-dark">Teléfono:</label>
-                            <input type="text" class="form-control" id="telefono" placeholder="0000-0000" required>
-                            <small class="text-danger" id="telefonoError"></small>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
-                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
-                            <small class="text-danger" id="emailError"></small>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
-                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
-                            <small class="text-danger" id="emailError"></small>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
-                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
-                            <small class="text-danger" id="emailError"></small>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
-                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
-                            <small class="text-danger" id="emailError"></small>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
-                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
-                            <small class="text-danger" id="emailError"></small>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
-                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
-                            <small class="text-danger" id="emailError"></small>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
-                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
-                            <small class="text-danger" id="emailError"></small>
-                            <div class="mb-3">
-                                <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
-                                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
-                                <small class="text-danger" id="emailError"></small>
+                            <div>
+                            <div class="mb-2">
+                                <label for="nombres" class="col-form-label">Datos del cliente:</label>
+                                <div class="mb-3">
+                                    <label for="nombres" class="col-form-label"><input type="text" class="form-control input-cajareserva inputDataClient" id="nombres" placeholder="Usuario Registrado" readonly></label>
+                                    <label for="direccion" class="col-form-label"><input type="text" class="form-control input-cajareserva inputDataClient" id="direccion" placeholder="usuario@correo.com" readonly></label>
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
-                                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
-                                <small class="text-danger" id="emailError"></small>
+                                <label for="telefono" class="col-form-label">Entrega:</label>
+                                <div class="dropdown">
+                                    <button id="dropdownBtn" class="btn-secondary dropdown-toggle input-cajareserva1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        País
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" onclick="selectDestination('Guatemala')">Guatemala</a></li>
+                                        <li><a class="dropdown-item" onclick="selectDestination('Honduras')">Honduras</a></li>
+                                        <li><a class="dropdown-item" onclick="selectDestination('El Salvador')">El Salvador</a></li>
+                                        <li><a class="dropdown-item" onclick="selectDestination('Nicaragua')">Nicaragua</a></li>
+                                        <li><a class="dropdown-item" onclick="selectDestination('Costa Rica')">Costa Rica</a></li>
+                                    </ul>
+                                </div>
                             </div>
+                            <!-- Dropdown de Departamento/Provincia -->
                             <div class="mb-3">
-                                <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
-                                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
-                                <small class="text-danger" id="emailError"></small>
+                                <div class="dropdown">
+                                    <button id="regionBtn" class="btn-secondary dropdown-toggle input-cajareserva1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Departamento
+                                    </button>
+                                    <ul id="regionMenu" class="dropdown-menu"></ul>
+                                </div>
                             </div>
+                            <div class="mb-3"> <!--LA FUNCIÓN DEL INPUT, ESTÁ EN EL ARCHIVO "validacionCaja.js"-->
+                                <input type="text" class="form-control" id="input-direccionreserva" 
+                                    placeholder="Dirección, ej: Calle 5, Zona 3" required>
+                                <small class="text-danger" id="direccionError"></small>
+                            </div>
+                            <div class="mb-3"> <!--LA FUNCIÓN DEL INPUT, ESTÁ EN EL ARCHIVO "validacionCaja.js"-->
+                                <input type="text" class="form-control" id="input-telefono" placeholder="Teléfono" required>
+                                <small class="text-danger" id="telefonoError"></small>
+                            </div>   
                             <div class="mb-3">
-                                <label for="email" class="col-form-label text-dark">Correo Electrónico:</label>
-                                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
-                                <small class="text-danger" id="emailError"></small>
+                                <label for="miCheckbox" class="form-check-label"><input type="checkbox" id="miCheckbox" 
+                                    class="form-check-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    Guarde esta información para la próxima vez.</label>
                             </div>
                         </div>
+                        <div class="mb-3">
+                            <label for="metodopago" class="col-form-label">Método de envío:</label>
+                            <div id="metodopago" class="form-control input-cajareserva" readonly>
+                                <strong>Encomendista hacia </strong><span id="paisNombre" class="font-italic"></span>:<br>
+                                <strong>- </strong><span id="encomendistaNombre"></span><br>
+                                <strong>Precio por envío: </strong><span id="precioEncomendista"></span>
+                            </div>
+                        </div>  
+                        <div class="mb-3">
+                            <label class="form-label">Derechos e impuestos:</label>
+                            <div class="contenedor-radio-input">
+                                <label class="radio-input">
+                                    <input type="radio" id="opcion1" name="opciones" value="opcion1">
+                                    <span class="texto-radio"><p class="estilosDereImpue1">Pagar ahora.</p><p class="estilosDereImpue">Sin cargos adicionales por envío.</p></span>
+                                </label>
+                                <label class="radio-input">
+                                    <input type="radio" id="opcion2" name="opciones" value="opcion2">
+                                    <span class="texto-radio"><p class="estilosDereImpue1">Pagar contra entrega.</p><p class="estilosDereImpue">Sin cargos adicionales por envío.</p></span>
+                                </label>
+                            </div>
+                        </div>                                                                         
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn-primary btn-enviar" type="submit" form="compraForm">Reservar</button>
+                    <button class="btn-primary btn-enviar" type="submit" form="compraForm" onclick="mostrarmodalsatisfactorio()">Reservar</button>
                 </div>
+                <!-- Botón para abrir el modal -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="comprarealizada" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content text-center p-4">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Éxito</h1>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="d-flex justify-content-center">
+                                            <div id="successIcon" class="checkmark-circle">
+                                                <div class="background"></div>
+                                                <div class="checkmark draw"></div>
+                                            </div>
+                                        </div>
+                                        <h4 class="mt-3 text-success">¡Compra realizada!</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <style>
+                            /* Estilos del ícono de éxito */
+                            .checkmark-circle {
+                                width: 80px;
+                                height: 80px;
+                                position: relative;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: #28a745;
+                                animation: zoomIn 0.4s ease-in-out;
+                            }
+
+                            .checkmark {
+                                width: 30px;
+                                height: 50px;
+                                border-right: 5px solid white;
+                                border-bottom: 5px solid white;
+                                transform: rotate(45deg);
+                                position: absolute;
+                                top: 20%;
+                                left: 35%;
+                                animation: drawCheck 0.5s ease-out forwards;
+                            }
+
+                            /* Animaciones */
+                            @keyframes zoomIn {
+                                from { transform: scale(0); opacity: 0; }
+                                to { transform: scale(1); opacity: 1; }
+                            }
+
+                            @keyframes drawCheck {
+                                from { height: 0; width: 0; }
+                                to { height: 50px; width: 30px; }
+                            }
+                        </style>
+
+                        <script>
+                            function mostrarmodalsatisfactorio () {
+                                let modalElement = document.getElementById("comprarealizada");
+                                let successModal = new bootstrap.Modal(modalElement);
+                                successModal.show();
+
+                                // Espera 3 segundos y cierra el modal automáticamente
+                                setTimeout(() => {
+                                    let modalInstance = bootstrap.Modal.getInstance(modalElement);
+                                    if (modalInstance) {
+                                        modalInstance.hide(); // Cierra el modal correctamente
+                                    }
+                                }, 1500);
+                            }
+                        </script>
             </div>
         </div>
     </div>
 </div>
+
 
 
         
@@ -647,7 +715,7 @@
                         </div>
                     </div>
                     <a class="btn-cesta" type="button" class="btn btn-primary" 
-                     data-bs-whatever="@fat">Agregar al Carrito</a>
+                     data-bs-whatever="@fat" onclick="mostrarSuccessModal(event)">Agregar al Carrito</a>
                 </div>
             </div>
         </div>                    
@@ -749,5 +817,6 @@
     <script src="js/validacionesmodal.js"></script>
     <script src="js/cerrarsesion.js"></script>
     <script src="js/carritoProductos.js"></script>
+    <script src="js/validaciónCaja.js"></script>
 </body>
 </html>
