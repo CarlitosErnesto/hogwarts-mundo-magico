@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>HOGWARTS - Forja tu Varita</title>
+    <title>HOGWARTS - Forjar Varita</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -34,6 +34,7 @@
     <link href="https://fonts.cdnfonts.com/css/lucky-shoes" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    
 
     <script>
         // Verificar si el usuario está autenticado, si no lo está, redirigir a login
@@ -41,6 +42,87 @@
             window.location.href = "login.html"; // Redirigir si no está autenticado
         }
     </script>
+
+<style>
+    .container-1 {
+        background: #5e60d2ae;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        margin: auto auto;
+    }
+    select, button, input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+    }
+    select, input {
+        background: #f0e6d2;
+        color: #2c9a0a;
+        outline: none;
+    }
+    button {
+        background: #b38b6d;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;    
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    }
+    button:hover {
+        background: #a1785e;
+        transform: scale(1.03);
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-content {
+        background: #74d42fdf;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        color: #ffffff;
+        position: relative;
+        width: 100%;
+        max-width: 350px;
+    }
+    .modal img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(151, 6, 6, 0.2);
+    }
+    .close {
+        color: #4a3f35;
+        font-size: 40px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+    #confettiCanvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+</style>
 </head>
 <body>
     <!-- Topbar Start -->
@@ -60,35 +142,34 @@
     <!-- Topbar End -->
 
         <!-- Navbar Start -->
-        <div class="container-fluid position-relative nav-bar p-0">
-            <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-                <nav class="navbar navbar-expand-lg navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5" style="background-color: #1E1E1E;"> <!-- el style es para darle color al fondo del nav-->
-                    <a href="" class="navbar-brand">
-                        <h1 class="m-0 text-primary">HOGWARTS</h1>
-                    </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                        <div class="navbar-nav ml-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Inicio</a>
-                            <a href="casas.html" class="nav-item nav-link">Casas</a>
-                            <a href="#" class="nav-item nav-link">Crear Varita</a>
-                            </div>
-                            <a href="producComen.html" class="nav-item nav-link">Productos y Comentarios</a>
-                            <button style="width: 100%; max-width: 130px; padding: 4px 16px; background: #2f82ff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.1s ease; 
-                                font-size: 14px; margin: 30px auto;" 
-                                onmouseover="this.style.background='#0056b3'" 
-                                onmouseout="this.style.background='#007BFF'" onclick="cerrarSesion()">
-                                Cerrar Sesión
-                            </button>   
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5" style="background-color: #44306f;"> <!-- el style es para darle color al fondo del nav-->
+                <a href="" class="navbar-brand">
+                    <h1 class="m-0 text-primary">FORJAR VARITA</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Inicio</a>
+                        <a href="casas.html" class="nav-item nav-link">Casas</a>
+                        <a href="crearVarita.html" class="nav-item nav-link">Crear Varita</a>
+                        <a href="producComen.html" class="nav-item nav-link">Productos y Comentarios</a>
                         </div>
+                        <button style="width: 100%; max-width: 130px; padding: 4px 16px; background: #2f82ff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.1s ease; 
+                            font-size: 14px; margin: 30px auto;" 
+                            onmouseover="this.style.background='#0056b3'" 
+                            onmouseout="this.style.background='#007BFF'" onclick="cerrarSesion()">
+                            Cerrar Sesión
+                        </button>   
                     </div>
-                </nav>
-            </div>
+                </div>
+            </nav>
         </div>
-        <!-- Navbar End -->
-
+    </div>
+    <!-- Navbar End -->
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
@@ -111,117 +192,130 @@
             <a class="carousel-control-next" href="#header-carousel" data-slide="next">
             </a>
         </div>
-    </div>
+    </div><br><br><br>
     <!-- Carousel End -->
 
 
-
-
-    <!-- Service Start -->
-    <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
-            <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
-                <h1>Tours & Travel Services</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Travel Guide</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-ticket-alt mx-auto mb-4"></i>
-                        <h5 class="mb-2">Ticket Booking</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-hotel mx-auto mb-4"></i>
-                        <h5 class="mb-2">Hotel Booking</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Travel Guide</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-ticket-alt mx-auto mb-4"></i>
-                        <h5 class="mb-2">Ticket Booking</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-hotel mx-auto mb-4"></i>
-                        <h5 class="mb-2">Hotel Booking</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
+        <canvas id="confettiCanvas"></canvas>
+    
+        <div class="container-1">
+            <h2 style="font-family: 'Harry Potter', serif; color: goldenrod; text-align: center; 
+                font-size: 50px; text-shadow: green 4px 5px;">Forja tu Varita</h2><br>
+            <form id="formVarita">
+                <label for="madera">Tipo de Madera:</label>
+                <select id="madera">
+                    <option value="roble">Roble</option>
+                    <option value="sauce">Sauce</option>
+                    <option value="fresno">Fresno</option>
+                </select>
+    
+                <label for="nucleo">Núcleo:</label>
+                <select id="nucleo">
+                    <option value="fenix">Pluma de Fénix</option>
+                    <option value="unicornio">Pelo de Unicornio</option>
+                </select>
+    
+                <label for="color">Color del Mango:</label>
+                <select id="color">
+                    <option value="natural">Madera Natural</option>
+                    <option value="negro">Negro</option>
+                    <option value="dorado">Dorado</option>
+                </select>
+    
+                <label for="magia">Tipo de Magia que prefieres:</label>
+                <input type="text" id="magia" placeholder="Escribe tu tipo de magia..." style="width: 100%">
+    
+                <label for="personalidad">¿Cuál es tu personalidad mágica?</label>
+                <input type="text" id="personalidad" placeholder="Describe tu personalidad mágica..." style="width: 100%">
+                <br><br>
+                <button type="button" onclick="generarVarita()" style="width: 50%; background-color: rgb(37, 146, 37); margin-left: 25%;">¡Forjar mi Varita!</button>
+            </form>
+        </div>
+    
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal()">&times;</span>
+                <h3>¡Tu Varita ha sido Forjada!</h3>
+                <img id="imagenVarita" src="" alt="Varita generada">
             </div>
         </div>
-    </div>
-    <!-- Service End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h6>
-                <h1>What Say Our Clients</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="text-center pb-4">
-                    <img class="img-fluid mx-auto" src="img/testimonial-1.jpg" style="width: 100px; height: 100px;" >
-                    <div class="testimonial-text bg-white p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                        </p>
-                        <h5 class="text-truncate">Client Name</h5>
-                        <span>Profession</span>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <img class="img-fluid mx-auto" src="img/testimonial-2.jpg" style="width: 100px; height: 100px;" >
-                    <div class="testimonial-text bg-white p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                        </p>
-                        <h5 class="text-truncate">Client Name</h5>
-                        <span>Profession</span>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <img class="img-fluid mx-auto" src="img/testimonial-3.jpg" style="width: 100px; height: 100px;" >
-                    <div class="testimonial-text bg-white p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                        </p>
-                        <h5 class="text-truncate">Client Name</h5>
-                        <span>Profession</span>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <img class="img-fluid mx-auto" src="img/testimonial-4.jpg" style="width: 100px; height: 100px;" >
-                    <div class="testimonial-text bg-white p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                        </p>
-                        <h5 class="text-truncate">Client Name</h5>
-                        <span>Profession</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
+    
+        <script>
+            let confettiAnimation;
+    
+            function generarVarita() {
+                let madera = document.getElementById('madera').value;
+                let nucleo = document.getElementById('nucleo').value;
+                let color = document.getElementById('color').value;
+                let magia = document.getElementById('magia').value;
+                let personalidad = document.getElementById('personalidad').value;
+    
+                let imagen = `varita_${madera}_${nucleo}_${color}.png`;
+    
+                document.getElementById('imagenVarita').src = "img/varitas/" + imagen;
+                document.getElementById('modal').style.display = 'flex';
+    
+                lanzarConfetti();
+            }
+    
+            function cerrarModal() {
+                document.getElementById('modal').style.display = 'none';
+                detenerConfetti();
+            }
+    
+            // Animación de Confetti
+            const canvas = document.getElementById("confettiCanvas");
+            const ctx = canvas.getContext("2d");
+    
+            let confetti = [];
+    
+            function lanzarConfetti() {
+                detenerConfetti(); // Reinicia la animación al generar una nueva varita
+    
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+    
+                confetti = [];
+                for (let i = 0; i < 100; i++) {
+                    confetti.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height - canvas.height,
+                        size: Math.random() * 6 + 2,
+                        speed: Math.random() * 4 + 1,
+                        angle: Math.random() * 360,
+                        color: `hsl(${Math.random() * 360}, 70%, 60%)`
+                    });
+                }
+    
+                animateConfetti();
+            }
+    
+            function animateConfetti() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                confetti.forEach((particle, index) => {
+                    particle.y += particle.speed;
+                    particle.x += Math.sin((particle.angle * Math.PI) / 180) * 2;
+                    particle.angle += Math.random() * 5 - 2.5;
+    
+                    ctx.fillStyle = particle.color;
+                    ctx.beginPath();
+                    ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                    ctx.fill();
+    
+                    if (particle.y > canvas.height) {
+                        confetti[index].y = 0;
+                        confetti[index].x = Math.random() * canvas.width;
+                    }
+                });
+    
+                confettiAnimation = requestAnimationFrame(animateConfetti);
+            }
+    
+            function detenerConfetti() {
+                cancelAnimationFrame(confettiAnimation);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+        </script>
 
 <!-- INICIO DE PIE DE PÁGINA WEB -->
 <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
